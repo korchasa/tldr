@@ -1,4 +1,4 @@
-name,     quadrant,ring,isNew,
+name,     quadrant,ring,isNew,description
 Golang,  adopt,languages & frameworks,FALSE,
 PostgreSQL,adopt,data management,FALSE,
 Kubernetes,adopt,platforms & infrastructure,FALSE,
