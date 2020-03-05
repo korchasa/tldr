@@ -74,3 +74,6 @@ TypeScript,languages & frameworks,adopt,FALSE,
 Yii,languages & frameworks,hold,FALSE,
 Zero legacy,techniques,trial,FALSE,
 AsciiDoc,languages & frameworks,adopt,FALSE,
+Bash,languages & frameworks,adopt,FALSE
+Fuzz testing,techniques,adopt,FALSE,
+Mutation testing,techniques,adopt,FALSE,
