@@ -1,0 +1,9 @@
+[
+  {
+    "name": "Aichat",
+    "ring": "tools",
+    "quadrant": "trial",
+    "isNew": "FALSE",
+    "description": "A console client for interacting with large language models for automation purposes."
+  }
+]
