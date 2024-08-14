@@ -1,104 +1,103 @@
-name;ring;quadrant;isNew;description
-Aichat;tools;trial;FALSE;A console client for interacting with large language models for automation purposes.
-Aider;tools;assess;TRUE;AI pair programming in terminal
-Airflow;platforms&infrastructure;assess;TRUE;An open-source platform to programmatically author, schedule, and monitor workflows.
-API shims for old versions;techniques;trial;FALSE;Techniques used to allow existing APIs to communicate with legacy versions.
-ArgoCD;platforms&infrastructure;adopt;TRUE;A declarative, GitOps continuous delivery tool for Kubernetes.
-Assets database;techniques;trial;TRUE;A database for tracking and managing servers, databases, and hosts.
-AWS;platforms&infrastructure;adopt;FALSE;Amazon Web Services – a comprehensive and widely adopted cloud platform.
-AWS CUDOS;tools;assess;TRUE;AWS Cost and Usage Report (CUR) for detailed billing information.
-AWS Organization;platforms&infrastructure;trial;TRUE;A management account service for consolidating AWS accounts for billing and access purposes.
-Bash;languages&frameworks;adopt;FALSE;A Unix shell and command language.
-Bruno;tools;assess;TRUE;API testing IDE for running and managing API tests.
-Chaos engineering;techniques;assess;TRUE;Practices that ensure systems can withstand unexpected disruptions by intentionally injecting failures.
-Clickhouse;platforms&infrastructure;adopt;FALSE;A fast open-source columnar database for OLAP.
-Cloudflare;platforms&infrastructure;adopt;FALSE;A global network designed to make everything you connect to the Internet secure, private, fast, and reliable.
-CodeGPT;tools;trial;TRUE;An IDE plugin facilitating AI-assisted code development and interaction.
-Company level conventions;techniques;trial;FALSE;Standardized structures, metadata, and naming conventions used across the company.
-Container security scanning;techniques;adopt;TRUE;Techniques for scanning and securing container images and environments.
-Container-based builds;techniques;adopt;FALSE;Using containers to create reproducible build environments.
-Continue;tools;assess;TRUE;An IDE plugin facilitating AI-assisted code development and interaction.
-Copilots in daily work;techniques;trial;TRUE;AI-assisted tools integrated into daily workflows to enhance productivity.
-Coroot;tools;trial;FALSE;K8s metrics, logs, traces, continuous profiling, and SLO-based alerting, supercharged with predefined dashboards and inspections.
-Development Enhancement Proposals;techniques;trial;TRUE;Structured documentation suggesting improvements or modifications in development processes.
-DigitalOcean Kubernetes;platforms&infrastructure;trial;FALSE;Managed Kubernetes service from DigitalOcean.
-ELK stack;platforms&infrastructure;hold;FALSE;Elasticsearch, Logstash, and Kibana stack for search and analysis of log data.
-Envoy;platforms&infrastructure;assess;TRUE;A high-performance open-source edge and service proxy designed for cloud-native applications.
-Event streaming as the source of truth;techniques;trial;TRUE;Using event streams as the primary data source for real-time analytics and processing.
-FrankenPHP;platforms&infrastructure;assess;True;Modern and fast PHP runtime with build-in http-server, logging and metrics.
-Gitlab;platforms&infrastructure;adopt;FALSE;An open-source DevOps platform providing SCM, CI/CD, and more.
-Golang;languages&frameworks;adopt;FALSE;An open-source programming language that makes it easy to build simple, reliable, and efficient software.
-Golden signals;techniques;adopt;TRUE;Core metrics that provide a high-level view of system health (latency, traffic, errors, saturation).
-Google Kubernetes Engine;platforms&infrastructure;trial;FALSE;Managed Kubernetes service provided by Google Cloud.
-Grafana;platforms&infrastructure;adopt;FALSE;Open-source platform for monitoring and observability.
-Granted;tools;assess;TRUE;A command-line tool that simplifies the opening of multiple accounts in the browser simultaneously, streamlines account switching.
-GraphQL;techniques;hold;FALSE;A data query language developed internally by Facebook in 2012 before being released publicly in 2015.
-gRPC;languages&frameworks;trial;TRUE;A high-performance, open-source universal RPC framework.
-Hashicorp Vault;platforms&infrastructure;adopt;FALSE;A tool for securely accessing secrets via a unified interface.
-Helm;platforms&infrastructure;adopt;FALSE;A package manager for Kubernetes.
-Httpie ;tools;adopt;FALSE;A user-friendly command-line HTTP client.
-In-house Terraform modules;techniques;adopt;FALSE;Custom Terraform components developed and maintained internally.
-Infrastructure as a Service;techniques;adopt;TRUE;Separation of infrastructure into platform and project infrastructure, with corresponding division of teams and processes.
-Infrastructure as Code;techniques;adopt;FALSE;Managing and provisioning computing infrastructure using machine-readable predefined scripts, rather than physical hardware configuration or interactive configuration tools.
-Istio;platforms&infrastructure;assess;FALSE;An open platform to connect, manage, and secure microservices.
-Javascript;languages&frameworks;hold;FALSE;A high-level, just-in-time compiled, multi-paradigm programming language.
-Jira;platforms&infrastructure;adopt;FALSE;A proprietary issue tracking product developed by Atlassian that allows bug tracking and agile project management.
-jq/yq;tools;adopt;FALSE;Console tools to manipulate JSON and YAML data.
-K9S;tools;adopt;FALSE;A terminal-based UI to interact with Kubernetes clusters.
-Kafka;platforms&infrastructure;trial;FALSE;An open-source platform for building real-time streaming data pipelines and applications.
-Kubernetes;platforms&infrastructure;adopt;FALSE;An open-source system for automating deployment, scaling, and management of containerized applications.
-Kubernetes Operators;platforms&infrastructure;trial;TRUE;Kubernetes Operators extend Kubernetes functionalities by automating application-specific tasks.
-Lean development;techniques;adopt;FALSE;An agile methodology focused on optimizing efficiency and minimizing waste in the development process.
-LLMs in daily work;techniques;adopt;TRUE;Vetting large language models for training, chatbots, and automation in everyday workflows.
-Loki;platforms&infrastructure;trial;FALSE;A log aggregation system designed to store and query logs from various sources.
-Lua;languages&frameworks;hold;FALSE;A lightweight, high-level, multi-paradigm programming language designed primarily for embedded use in applications.
-Measurement and control of security risks;techniques;assess;TRUE;Techniques and tools to identify, measure, and manage security risks.
-Measurement and control of technical debt;techniques;assess;TRUE;Processes to identify, measure, and manage technical debt in software systems.
-Mentorship program;techniques;adopt;FALSE;A structured program where experienced team members guide and support less experienced team members.
-MLFlow;platforms&infrastructure;assess;TRUE;An open-source platform for managing the machine learning lifecycle.
-MLOps;techniques;assess;TRUE;Practices and tools for deploying and maintaining machine learning models in production reliably and efficiently.
-MockServer;platforms&infrastructure;adopt;FALSE;A framework for mocking and testing HTTP and HTTPS requests and responses.
-MySQL;platforms&infrastructure;hold;FALSE;An open-source relational database management system.
-N8n;platforms&infrastructure;trial;TRUE;An extendable workflow automation tool that enables users to connect anything to everything via its open-source, no-code platform.
-New project/service framework;techniques;adopt;FALSE;A framework for initializing and structuring new software projects or services.
-Nginx;platforms&infrastructure;adopt;FALSE;High-performance HTTP server, reverse proxy, and IMAP/POP3 proxy server.
-Node.js;languages&frameworks;adopt;FALSE;A JavaScript runtime built on Chrome's V8 JavaScript engine.
-Nomad;platforms&infrastructure;assess;TRUE;A simple and flexible orchestrator to deploy and manage containers and non-containerized applications.
-Offline builds;techniques;adopt;FALSE;Building software in environments without internet access to enhance security and reproducibility.
-Onboarding Package;techniques;trial;TRUE;Structured resources and processes to onboard new team members efficiently.
-Open Policy Agent;tools;assess;TRUE;A policy-based control for cloud-native environments.
-OpenAPI / RAML / Swagger;languages&frameworks;adopt;FALSE;Frameworks for creating, documenting, and consuming REST APIs.
-OpenTelemetry;platforms&infrastructure;trial;TRUE;An open-source observability framework for cloud-native software, providing standards for collecting telemetry data, distributed traces, metrics, and logs.
-OpenTelemetry;platforms&infrastructure;trial;TRUE;An open-source observability framework for cloud-native software, providing standards for collecting telemetry data.
-OpenTofu;tools;assess;TRUE;Open-source fork of Terraform.
-Pair DevOps;techniques;adopt;FALSE;Practice in which two team members work together to perform critical tasks or onboard new employees.
-PEP-20;techniques;adopt;FALSE;The Zen of Python, defined in PEP 20, is a set of guiding principles for writing computer programs in Python.
-Perplexity;tools;adopt;TRUE;A conversational search engine that answers queries using natural language predictive text, utilizing sources from the web. |
-PHP;languages&frameworks;hold;FALSE;A popular general-purpose scripting language that is especially suited to web development.
-Platform as a Service;techniques;trial;TRUE;Cloud computing service providing a platform allowing customers to develop, run, and manage applications.
-Playwright;platforms&infrastructure;assess;FALSE;Node library to automate Chromium, Firefox, and WebKit.
-PostgreSQL;platforms&infrastructure;adopt;FALSE;A powerful, open-source object-relational database system.
-Production probes;techniques;adopt;FALSE;Probes and diagnostics run in production environments to ensure service health.
-Prometheus;platforms&infrastructure;adopt;FALSE;An open-source systems monitoring and alerting toolkit.
-Pulumi;platforms&infrastructure;assess;TRUE;An open-source infrastructure as code tool that allows you to create, deploy, and manage cloud infrastructure using familiar programming languages.
-Python;languages&frameworks;hold;FALSE;An interpreted, high-level and general-purpose programming language.
-QAnything;tools;assess;TRUE;Question and Answer based on Anything.
-QAOps;techniques;trial;TRUE;Bridging the QA and Operations teams to enable continuous monitoring, testing, and improvement of software.
-Raycast;tools;trial;TRUE;An extensible command palette to control your tools.
-SecOps;techniques;trial;TRUE;Integrating security practices within the DevOps process.
-Service mesh;techniques;trial;FALSE;Dedicated infrastructure layer for handling service-to-service communication.
-Shortest HADI cycle for new areas of knowledge;techniques;adopt;FALSE;A rapid cycle of Hypothesis, Action, Data, and Insights to explore and learn new areas of knowledge. For example, setting up a ML-based recommendation system.
-Static code analysis;techniques;adopt;FALSE;Analyzing source code for potential errors without executing the program.
-Stern;tools;adopt;FALSE;Multi-pod and container log tailing tool for Kubernetes.
-Teleport;platforms&infrastructure;adopt;TRUE;An open-source tool for providing secure access to infrastructure through SSH, Kubernetes, and other protocols.
-Terraform;tools;adopt;FALSE;An open-source infrastructure as code software tool.
-Terrascan;tools;trial;FALSE;A static code analyzer for security and compliance scanning of Infrastructure as Code.
-Tfsec;tools;trial;TRUE;Security scanner for Terraform code.
-Tracing;techniques;adopt;FALSE;Techniques used to monitor and analyze distributed systems by tracking the flow of requests.
-Traefik;platforms&infrastructure;adopt;TRUE;An open-source edge router that makes publishing, securing, and managing microservices and APIs easy.
-Trivy;tools;adopt;TRUE;A comprehensive security scanner for vulnerabilities in containers, code repositories, and other sources.
-TypeScript;languages&frameworks;adopt;FALSE;A typed superset of JavaScript that compiles to plain JavaScript.
-Unified DevOps environment;techniques;trial;TRUE;A consolidated environment that integrates various DevOps tools, consoles, links, and runbooks.
-Zed;tools;trial;TRUE;A lightweight IDE designed for AI/ML workflow interactions.
-Zep;platforms&infrastructure;assess;TRUE;Easy-to-use memory for ML Apps.
-Zero legacy;techniques;trial;FALSE;Strategies for minimizing or eliminating legacy code and systems within an organization.
+name,ring,quadrant,isNew,description
+API shims for old versions,techniques,trial,FALSE,"Techniques used to allow existing APIs to communicate with legacy versions."
+ArgoCD,platforms & infrastructure,adopt,TRUE,"A declarative, GitOps continuous delivery tool for Kubernetes."
+AWS,platforms & infrastructure,adopt,FALSE,"Amazon Web Services – a comprehensive and widely adopted cloud platform."
+AWS Organization,platforms & infrastructure,trial,TRUE,"A management account service for consolidating AWS accounts for billing and access purposes."
+Chaos engineering,techniques,assess,TRUE,"Practices that ensure systems can withstand unexpected disruptions by intentionally injecting failures."
+Clickhouse,platforms & infrastructure,adopt,FALSE,"A fast open-source columnar database for OLAP."
+Cloudflare,platforms & infrastructure,adopt,FALSE,"A global network designed to make everything you connect to the Internet secure, private, fast, and reliable."
+Container security scanning,techniques,adopt,TRUE,"Techniques for scanning and securing container images and environments."
+Container-based builds,techniques,adopt,FALSE,"Using containers to create reproducible build environments."
+Copilots in daily work,techniques,trial,TRUE,"AI-assisted tools integrated into daily workflows to enhance productivity."
+Development Enhancement Proposals,techniques,trial,TRUE,"Structured documentation suggesting improvements or modifications in development processes."
+DigitalOcean Kubernetes,platforms & infrastructure,trial,FALSE,"Managed Kubernetes service from DigitalOcean."
+ELK stack,platforms & infrastructure,hold,FALSE,"Elasticsearch, Logstash, and Kibana stack for search and analysis of log data."
+Envoy,platforms & infrastructure,assess,TRUE,"A high-performance open-source edge and service proxy designed for cloud-native applications."
+Event streaming as the source of truth,techniques,trial,TRUE,"Using event streams as the primary data source for real-time analytics and processing."
+Gitlab,platforms & infrastructure,adopt,FALSE,"An open-source DevOps platform providing SCM, CI/CD, and more."
+Golang,languages & frameworks,adopt,FALSE,"An open-source programming language that makes it easy to build simple, reliable, and efficient software."
+Golden signals,techniques,adopt,TRUE,"Core metrics that provide a high-level view of system health (latency, traffic, errors, saturation)."
+Google Kubernetes Engine,platforms & infrastructure,trial,FALSE,"Managed Kubernetes service provided by Google Cloud."
+Grafana,platforms & infrastructure,adopt,FALSE,"Open-source platform for monitoring and observability."
+GraphQL,techniques,hold,FALSE ;A data query language developed internally by Facebook in 2012 before being released publicly in 2015."
+gRPC,languages & frameworks,trial,TRUE,"A high-performance, open-source universal RPC framework."
+Hashicorp Vault,platforms & infrastructure,adopt,FALSE,"A tool for securely accessing secrets via a unified interface."
+Helm,platforms & infrastructure,adopt,FALSE,"A package manager for Kubernetes."
+In-house Terraform modules,techniques,adopt,FALSE,"Custom Terraform components developed and maintained internally."
+Infrastructure as a Service,techniques,adopt,TRUE,"Separation of infrastructure into platform and project infrastructure, with corresponding division of teams and processes."
+Infrastructure as Code,techniques,adopt,FALSE,"Managing and provisioning computing infrastructure using machine-readable predefined scripts, rather than physical hardware configuration or interactive configuration tools."
+Istio,platforms & infrastructure,assess,FALSE,"An open platform to connect, manage, and secure microservices."
+Javascript,languages & frameworks,hold,FALSE,"A high-level, just-in-time compiled, multi-paradigm programming language."
+Jira,platforms & infrastructure,adopt,FALSE,"A proprietary issue tracking product developed by Atlassian that allows bug tracking and agile project management."
+bash,languages & frameworks,adopt,FALSE,"A Unix shell and command language."
+Kafka,platforms & infrastructure,trial,FALSE,"An open-source platform for building real-time streaming data pipelines and applications."
+Kubernetes,platforms & infrastructure,adopt,FALSE,"An open-source system for automating deployment, scaling, and management of containerized applications."
+Kubernetes Operators,platforms & infrastructure,trial,TRUE,"Kubernetes Operators extend Kubernetes functionalities by automating application-specific tasks."
+Lean development,techniques,adopt,FALSE,"An agile methodology focused on optimizing efficiency and minimizing waste in the development process."
+LLMs in daily work,techniques,adopt,TRUE,"Vetting large language models for training, chatbots, and automation in everyday workflows."
+Loki,platforms & infrastructure,trial,FALSE,"A log aggregation system designed to store and query logs from various sources."
+Lua,languages & frameworks,hold,FALSE,"A lightweight, high-level, multi-paradigm programming language designed primarily for embedded use in applications."
+MockServer,platforms & infrastructure,adopt,FALSE,"A framework for mocking and testing HTTP and HTTPS requests and responses."
+MySQL,platforms & infrastructure,hold,FALSE,"An open-source relational database management system."
+nginx,platforms & infrastructure,adopt,FALSE ;High-performance HTTP server, reverse proxy, and IMAP/POP3 proxy server."
+Node.js,languages & frameworks,adopt,FALSE ;A JavaScript runtime built on Chrome's V8 JavaScript engine."
+Offline builds,techniques,adopt,FALSE,"Building software in environments without internet access to enhance security and reproducibility."
+Onboarding Package,techniques,trial,TRUE,"Structured resources and processes to onboard new team members efficiently."
+OpenAPI / RAML / Swagger,languages & frameworks,adopt,FALSE,"Frameworks for creating, documenting, and consuming REST APIs."
+OpenTelemetry,platforms & infrastructure,trial,TRUE,"An open-source observability framework for cloud-native software, providing standards for collecting telemetry data."
+PEP-20; techniques,adopt,FALSE ;The Zen of Python, defined in PEP 20, is a set of guiding principles for writing computer programs in Python."
+PHP,languages & frameworks,hold,FALSE,"A popular general-purpose scripting language that is especially suited to web development."
+Playwright,platforms & infrastructure,assess,FALSE,"Node library to automate Chromium, Firefox, and WebKit."
+PostgreSQL,platforms & infrastructure,adopt,FALSE,"A powerful, open-source object-relational database system."
+New project/service framework,techniques,adopt,FALSE,"A framework for initializing and structuring new software projects or services."
+Production probes,techniques,adopt,FALSE,"Probes and diagnostics run in production environments to ensure service health."
+Prometheus,platforms & infrastructure,adopt,FALSE,"An open-source systems monitoring and alerting toolkit."
+Python,languages & frameworks,hold,FALSE,"An interpreted, high-level and general-purpose programming language."
+QAOps,techniques,trial,TRUE,"Bridging the QA and Operations teams to enable continuous monitoring, testing, and improvement of software."
+SecOps,techniques,trial,TRUE,"Integrating security practices within the DevOps process."
+Service mesh,techniques,trial,FALSE,"Dedicated infrastructure layer for handling service-to-service communication."
+Static code analysis,techniques,adopt,FALSE,"Analyzing source code for potential errors without executing the program."
+Teleport,platforms & infrastructure,adopt,TRUE,"An open-source tool for providing secure access to infrastructure through SSH, Kubernetes, and other protocols."
+Terraform,tools,adopt,FALSE,"An open-source infrastructure as code software tool."
+tfsec,tools,trial,TRUE,"Security scanner for Terraform code."
+Tracing,techniques,adopt,FALSE,"Techniques used to monitor and analyze distributed systems by tracking the flow of requests."
+Traefik,platforms & infrastructure,adopt,TRUE,"An open-source edge router that makes publishing, securing, and managing microservices and APIs easy."
+Trivy,tools,adopt,TRUE,"A comprehensive security scanner for vulnerabilities in containers, code repositories, and other sources."
+TypeScript,languages & frameworks,adopt,FALSE,"A typed superset of JavaScript that compiles to plain JavaScript."
+Zero legacy,techniques,trial,FALSE,"Strategies for minimizing or eliminating legacy code and systems within an organization."
+Measurement and control of technical debt,techniques,assess,TRUE,"Processes to identify, measure, and manage technical debt in software systems."
+Measurement and control of security risks,techniques,assess,TRUE,"Techniques and tools to identify, measure, and manage security risks."
+Company level conventions,techniques,trial,FALSE,"Standardized structures, metadata, and naming conventions used across the company."
+AWS CUDOS,tools,assess,TRUE,"AWS Cost and Usage Report (CUR) for detailed billing information."
+Stern,tools,adopt,FALSE,"Multi-pod and container log tailing tool for Kubernetes."
+Bruno,tools,assess,TRUE,"API testing IDE for running and managing API tests."
+Httpie ,tools,adopt,FALSE,"A user-friendly command-line HTTP client."
+jq/yq,tools,adopt,FALSE,"Console tools to manipulate JSON and YAML data."
+k9s; tools,adopt,FALSE,"A terminal-based UI to interact with Kubernetes clusters."
+Unified DevOps environment,techniques,trial,TRUE,"A consolidated environment that integrates various DevOps tools, consoles, links, and runbooks."
+Platform as a Service,techniques,trial,TRUE,"Cloud computing service providing a platform allowing customers to develop, run, and manage applications."
+Assets database,techniques,trial,TRUE,"A database for tracking and managing servers, databases, and hosts."
+Open Policy Agent,tools,assess,TRUE,"A policy-based control for cloud-native environments."
+Airflow,platforms & infrastructure,assess,TRUE,"An open-source platform to programmatically author, schedule, and monitor workflows."
+MLFlow,platforms & infrastructure,assess,TRUE,"An open-source platform for managing the machine learning lifecycle."
+MLOps,techniques,assess,TRUE,"Practices and tools for deploying and maintaining machine learning models in production reliably and efficiently."
+Aichat,tools,trial,FALSE,"A console client for interacting with large language models for automation purposes."
+CodeGPT,tools,trial,TRUE,"An IDE plugin facilitating AI-assisted code development and interaction."
+Zed,tools,trial,TRUE,"A lightweight IDE designed for AI/ML workflow interactions."
+Perplexity,tools,adopt,TRUE,"A conversational search engine that answers queries using natural language predictive text, utilizing sources from the web. |"
+Pair DevOps,techniques,adopt,FALSE,"Practice in which two team members work together to perform critical tasks or onboard new employees."
+Mentorship program,techniques,adopt,FALSE,"A structured program where experienced team members guide and support less experienced team members."
+Terrascan,tools,trial,FALSE,"A static code analyzer for security and compliance scanning of Infrastructure as Code."
+aider,tools,assess,TRUE,"AI pair programming in terminal"
+coroot,tools,trial,FALSE ;K8s metrics, logs, traces, continuous profiling, and SLO-based alerting, supercharged with predefined dashboards and inspections."
+n8n; platforms & infrastructure,trial,TRUE,"An extendable workflow automation tool that enables users to connect anything to everything via its open-source, no-code platform."
+zep,platforms & infrastructure,assess,TRUE,"Easy-to-use memory for ML Apps."
+Shortest HADI cycle for new areas of knowledge,techniques,adopt,FALSE,"A rapid cycle of Hypothesis, Action, Data, and Insights to explore and learn new areas of knowledge. For example, setting up a ML-based recommendation system."
+continue,tools,assess,TRUE,"An IDE plugin facilitating AI-assisted code development and interaction."
+raycast,tools,trial,TRUE,"An extensible command palette to control your tools."
+granted,tools,assess,TRUE,"A command-line tool that simplifies the opening of multiple accounts in the browser simultaneously, streamlines account switching."
+OpenTofu,tools,assess,TRUE,"Open-source fork of Terraform."
+QAnything,tools,assess,TRUE,"Question and Answer based on Anything."
+OpenTelemetry,platforms & infrastructure,trial,TRUE,"An open-source observability framework for cloud-native software, providing standards for collecting telemetry data, distributed traces, metrics, and logs."
+Pulumi,platforms & infrastructure,assess,TRUE,"An open-source infrastructure as code tool that allows you to create, deploy, and manage cloud infrastructure using familiar programming languages."
+FrankenPHP,platforms & infrastructure,assess,TRUE,"Modern and fast PHP runtime with build-in http-server, logging and metrics."
