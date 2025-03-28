@@ -1,3 +1,4 @@
+````markdown
 In this environment you have access to a set of tools you can use to answer the user's question.
 You can invoke functions by writing a <antml:function_calls> block like the following as part of your reply to the user:
 <antml:function_calls>
@@ -178,3 +179,4 @@ some-content
 <user_query>
 [[.user_query]]
 </user_query>
+````
