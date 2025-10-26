@@ -80,8 +80,6 @@ class OpenRouterTester:
             # Extract token information
             usage = data.get('usage', {})
             input_tokens = usage.get('prompt_tokens', 0)
-            output_tokens = usage.get('completion_tokens', 0)
-            total_tokens = usage.get('total_tokens', 0)
 
             return ModelResult(
                 model=model,
@@ -131,83 +129,8 @@ class OpenRouterTester:
         return results
 
     def print_results(self, results: List[ModelResult]):
-        """Prints results in a convenient format"""
-        print("\n" + "=" * 80)
-        print("TOKENIZATION TESTING RESULTS")
-        print("=" * 80)
-
-        # Group results by language
-        by_language = {}
-        for result in results:
-            if result.language not in by_language:
-                by_language[result.language] = []
-            by_language[result.language].append(result)
-
-        # Calculate language statistics
-        language_stats = {}
-        for language, lang_results in by_language.items():
-            successful_results = [r for r in lang_results if r.input_tokens > 0]
-            if successful_results:
-                # Get the original text for this language
-                original_text = self.test_texts.get(language, "")
-                text_length = len(original_text)
-
-                # Calculate average tokens and characters per token
-                avg_tokens = sum(r.input_tokens for r in successful_results) / len(successful_results)
-                avg_chars_per_token = text_length / avg_tokens if avg_tokens > 0 else 0
-
-                language_stats[language] = {
-                    'text_length': text_length,
-                    'avg_tokens': avg_tokens,
-                    'avg_chars_per_token': avg_chars_per_token,
-                    'successful_models': len(successful_results)
-                }
-
-        for language, lang_results in by_language.items():
-            print(f"\n{language.upper()}:")
-            print("-" * 60)
-            print(f"{'Model':<40} {'Tokens':<8}")
-            print("-" * 60)
-
-            for result in sorted(lang_results, key=lambda x: x.input_tokens, reverse=True):
-                if result.input_tokens > 0:  # Show only successful requests
-                    print(f"{result.model:<40} {result.input_tokens:<8}")
-
-            # Show language statistics
-            if language in language_stats:
-                stats = language_stats[language]
-                print("-" * 60)
-                print(f"Text length: {stats['text_length']} characters")
-                print(f"Average tokens: {stats['avg_tokens']:.1f}")
-                print(f"Characters per token: {stats['avg_chars_per_token']:.2f}")
-                print(f"Successful models: {stats['successful_models']}")
-
-        # General statistics
-        print(f"\n{'='*80}")
-        print("GENERAL STATISTICS")
-        print(f"{'='*80}")
-
-        successful_results = [r for r in results if r.input_tokens > 0]
-        failed_count = len(results) - len(successful_results)
-
-        print(f"Successful requests: {len(successful_results)}")
-        print(f"Failed requests: {failed_count}")
-
-        if successful_results:
-            avg_input_tokens = sum(r.input_tokens for r in successful_results) / len(successful_results)
-
-            print(f"Average input tokens: {avg_input_tokens:.1f}")
-
-        # Language comparison
-        if language_stats:
-            print(f"\n{'='*80}")
-            print("LANGUAGE COMPARISON")
-            print(f"{'='*80}")
-            print(f"{'Language':<12} {'Chars':<8} {'Avg Tokens':<12} {'Chars/Token':<12} {'Models':<8}")
-            print("-" * 60)
-
-            for language, stats in language_stats.items():
-                print(f"{language:<12} {stats['text_length']:<8} {stats['avg_tokens']:<12.1f} {stats['avg_chars_per_token']:<12.2f} {stats['successful_models']:<8}")
+        """Prints results in a convenient format - removed console output"""
+        pass
 
     def save_results_to_file(self, results: List[ModelResult], filename: str = "token_results.md"):
         """Saves results to Markdown file"""
@@ -242,24 +165,32 @@ class OpenRouterTester:
 
         with open(filepath, 'w', encoding='utf-8') as f:
             f.write("# GOAL\n\n")
-            f.write("Your goal is to write a report about tokenization test results. You need to analyze the results and create two graphs, selecting the most and least efficient languages and models, along with all other useful information about the results. Do not include any other information(about tests itself, or any other information) in your response. \n\n")
-            f.write("Main charts: model/language on the horizontal axis, number of tokens on the vertical axis. Two charts: one for text length, another for the number of characters in a token. Also, charts need to be made for each language and for each model.\n\n")
+            f.write("Your goal is to write a report about tokenization test results. You need to analyze the results and create two graphs, selecting the most and least efficient languages and models, along with all other useful information about the results. Do not include any other information(about tests itself, or any other information) in your response. Overall efficiency is the number of tokens per text. Tokenizer efficiency is the number of characters in a token. \n\n")
+            f.write("- chart: model+language on the horizontal axis, number of tokens in text on the vertical axis, group bars by models, bar colors by languages\n")
+            f.write("- chart: model+language on the horizontal axis, number of characters in a token on the vertical axis, group bars by models, bar colors by languages\n")
+            f.write("- table: model/language/text tokens/token characters\n")
+            f.write("- unexpected insights\n")
+            f.write("- hidden patterns\n")
+            f.write("- summary: average number of tokens in text, average number of characters in a token\n")
+            f.write("- summary: most and least efficient languages and models\n")
+
             f.write("## Tokenization Testing Results\n\n")
-
-
             # Summary
             successful_tests = len([r for r in results if r.input_tokens > 0])
             failed_tests = len(results) - successful_tests
 
             # Table 1: Results by Model and Language
-            f.write("| Model | Language | Tokens |\n")
-            f.write("|-------|----------|--------|\n")
+            f.write("| Model | Language | Text Length (chars) | Tokens | Token/Chars |\n")
+            f.write("|-------|----------|-------------------|--------|-------------|\n")
 
             for result in sorted(results, key=lambda x: (x.model, x.language)):
                 if result.input_tokens > 0:
-                    f.write(f"| {result.model} | {result.language} | {result.input_tokens} |\n")
+                    # Get text length for this language
+                    text_length = len(self.test_texts.get(result.language, ""))
+                    tokens_per_char = result.input_tokens / text_length if text_length > 0 else 0
+                    f.write(f"| {result.model} | {result.language} | {text_length} | {result.input_tokens} | {tokens_per_char:.4f} |\n")
                 else:
-                    f.write(f"| {result.model} | {result.language} | ❌ Failed |\n")
+                    f.write(f"| {result.model} | {result.language} | - | ❌ Failed | - |\n")
 
             f.write("\n")
 
@@ -282,7 +213,6 @@ def main():
     print("=" * 60, flush=True)
 
     results = tester.test_all_combinations()
-    tester.print_results(results)
     tester.save_results_to_file(results)
 
 if __name__ == "__main__":
