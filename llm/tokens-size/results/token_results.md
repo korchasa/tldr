@@ -1,12 +1,17 @@
 # GOAL
 
-Your goal is to write a report about tokenization test results. You need to analyze the results and create two graphs, selecting the most and least efficient languages and models, along with all other useful information about the results. Do not include any other information(about tests itself, or any other information) in your response. 
+Your goal is to write a report about tokenization test results. You need to analyze the results and create a report with the following parts:
+  - chart: model+language on the horizontal axis, number of tokens in text on the vertical axis, group bars by models, bar colors by language
+  - chart: model+language on the horizontal axis, number of characters in a token on the vertical axis, group bars by models, bar colors by language
+  - table: model/language/text tokens/token characters
+  - unexpected insights
+  - hidden patterns
+  - summary: average number of tokens in text, average number of characters in a token
+  - summary: most and least efficient languages and models
+
+Charts should not be separate files.
 
 ## Tokenization Testing Results
-
-**Total tests:** 55 | **Successful:** 55 | **Failed:** 0
-
-## Results by Model and Language
 
 | Model | Language | Tokens |
 |-------|----------|--------|
@@ -65,19 +70,3 @@ Your goal is to write a report about tokenization test results. You need to anal
 | x-ai/grok-code-fast-1 | Korean | 363 |
 | x-ai/grok-code-fast-1 | Russian | 326 |
 | x-ai/grok-code-fast-1 | Ukrainian | 399 |
-
-## Language Statistics
-
-| Language | Characters | Avg Tokens | Chars/Token | Models |
-|----------|------------|------------|-------------|--------|
-| English | 1106 | 260.9 | 4.24 | 11 |
-| Russian | 1196 | 377.2 | 3.17 | 11 |
-| Ukrainian | 1166 | 447.1 | 2.61 | 11 |
-| Finnish | 1138 | 413.2 | 2.75 | 11 |
-| Korean | 628 | 412.6 | 1.52 | 11 |
-
-## Analysis
-
-- **Most efficient tokenization:** English (4.24 chars/token)
-- **Least efficient tokenization:** Korean (1.52 chars/token)
-- **Average chars per token:** 2.86

@@ -243,16 +243,15 @@ class OpenRouterTester:
         with open(filepath, 'w', encoding='utf-8') as f:
             f.write("# GOAL\n\n")
             f.write("Your goal is to write a report about tokenization test results. You need to analyze the results and create two graphs, selecting the most and least efficient languages and models, along with all other useful information about the results. Do not include any other information(about tests itself, or any other information) in your response. \n\n")
+            f.write("Main charts: model/language on the horizontal axis, number of tokens on the vertical axis. Two charts: one for text length, another for the number of characters in a token. Also, charts need to be made for each language and for each model.\n\n")
             f.write("## Tokenization Testing Results\n\n")
 
 
             # Summary
             successful_tests = len([r for r in results if r.input_tokens > 0])
             failed_tests = len(results) - successful_tests
-            f.write(f"**Total tests:** {len(results)} | **Successful:** {successful_tests} | **Failed:** {failed_tests}\n\n")
 
             # Table 1: Results by Model and Language
-            f.write("## Results by Model and Language\n\n")
             f.write("| Model | Language | Tokens |\n")
             f.write("|-------|----------|--------|\n")
 
@@ -263,31 +262,6 @@ class OpenRouterTester:
                     f.write(f"| {result.model} | {result.language} | ❌ Failed |\n")
 
             f.write("\n")
-
-            # Table 2: Language Statistics
-            f.write("## Language Statistics\n\n")
-            f.write("| Language | Characters | Avg Tokens | Chars/Token | Models |\n")
-            f.write("|----------|------------|------------|-------------|--------|\n")
-
-            for language, stats in language_stats.items():
-                f.write(f"| {language} | {stats['text_length']} | {stats['avg_tokens']:.1f} | {stats['avg_chars_per_token']:.2f} | {stats['successful_models']} |\n")
-
-            f.write("\n")
-
-            # Additional analysis
-            f.write("## Analysis\n\n")
-            if language_stats:
-                # Find most efficient language (highest chars per token)
-                most_efficient = max(language_stats.items(), key=lambda x: x[1]['avg_chars_per_token'])
-                f.write(f"- **Most efficient tokenization:** {most_efficient[0]} ({most_efficient[1]['avg_chars_per_token']:.2f} chars/token)\n")
-
-                # Find least efficient language (lowest chars per token)
-                least_efficient = min(language_stats.items(), key=lambda x: x[1]['avg_chars_per_token'])
-                f.write(f"- **Least efficient tokenization:** {least_efficient[0]} ({least_efficient[1]['avg_chars_per_token']:.2f} chars/token)\n")
-
-                # Average across all languages
-                avg_chars_per_token = sum(stats['avg_chars_per_token'] for stats in language_stats.values()) / len(language_stats)
-                f.write(f"- **Average chars per token:** {avg_chars_per_token:.2f}\n")
 
         print(f"\nResults saved to file: {filepath}")
 
