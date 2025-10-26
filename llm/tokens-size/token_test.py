@@ -165,7 +165,7 @@ class OpenRouterTester:
 
         with open(filepath, 'w', encoding='utf-8') as f:
             f.write("# GOAL\n\n")
-            f.write("Your goal is to write a report about tokenization test results. You need to analyze the results and create two graphs, selecting the most and least efficient languages and models, along with all other useful information about the results. Do not include any other information(about tests itself, or any other information) in your response. Overall efficiency is the number of tokens per text. Tokenizer efficiency is the number of characters in a token. \n\n")
+            f.write("Your goal is to write a report about tokenization test results. You need to analyze the results with the following requirements: \n\n")
             f.write("- chart: model+language on the horizontal axis, number of tokens in text on the vertical axis, group bars by models, bar colors by languages\n")
             f.write("- chart: model+language on the horizontal axis, number of characters in a token on the vertical axis, group bars by models, bar colors by languages\n")
             f.write("- table: model/language/text tokens/token characters\n")
